@@ -12,3 +12,36 @@ function howManyIncreases(arr){
 };
 
 howManyIncreases(depthList);
+
+
+
+function slidingWindowIncreases(arr){
+    var threeSumIncreases=0;
+    for (let i = 0; i < arr.length-2; i++){
+        var currentThreeTotal = arr[i] + arr[i+1] + arr[i+2];
+        var nextThreeTotal = arr[i+1] + arr[i+2] + arr[i+3];
+        if (currentThreeTotal < nextThreeTotal){
+            threeSumIncreases++;
+        }
+    }
+    console.log(threeSumIncreases);
+};
+
+slidingWindowIncreases(depthList);
+
+
+
+function slidingWindowIncreases(arr){
+    var threeSumIncreases=0;
+    var currentThreeTotal=arr[0] + arr[1] + arr[2];
+    for (let i = 0; i < arr.length-2; i++){
+        var nextThreeTotal = arr[i+1] + arr[i+2] + arr[i+3];
+        if (currentThreeTotal < nextThreeTotal){
+            threeSumIncreases++;
+        }
+        currentThreeTotal=nextThreeTotal;
+    }
+    console.log(threeSumIncreases);
+};
+
+slidingWindowIncreases(depthList);
