@@ -9,6 +9,8 @@ var givenArr = data.split("\n");
  *
  * @param {string[]} array
  */
+
+// Day 2, part 2
 function plannedCourse(array) {
   forwardNum = 0;
   depth = 0;
@@ -31,3 +33,26 @@ function plannedCourse(array) {
 }
 
 plannedCourse(givenArr);
+
+// Day 2, part 2
+function complexCourse(array) {
+  horizontalPos = 0;
+  depth = 0;
+  aim = 0;
+  for (let i = 0; i < array.length; i++) {
+    splitUnit = array[i].split(" "); //["forward", "2"]
+    indInt = parseInt(splitUnit[1]);
+    if (splitUnit[0] === "forward") {
+      horizontalPos += indInt;
+      depth += aim * indInt;
+    } else if (splitUnit[0] === "up") {
+      aim -= indInt;
+    } else if (splitUnit[0] === "down") {
+      aim += indInt;
+    }
+  }
+  // multiply final forward and depth
+  console.log(horizontalPos * depth);
+}
+
+complexCourse(givenArr);
