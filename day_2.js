@@ -3,14 +3,14 @@ const fs = require("fs");
 const data = fs.readFileSync("day_2.txt", { encoding: "utf8", flag: "r" });
 console.log(data);
 
-var givenArr = data.split("\n");
-
 /**
  *
  * @param {string[]} array
  */
 
 // Day 2, part 2
+var givenArr = data.split("\n");
+
 function plannedCourse(array) {
   forwardNum = 0;
   depth = 0;
