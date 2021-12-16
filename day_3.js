@@ -32,6 +32,7 @@ function powerConsumption(array) {
   console.log(gamma);
   var epsilon = gamma.map((x) => (x == 0 ? 1 : 0));
   console.log(epsilon);
+  console.log(parseInt(gamma.join(""), 2) * parseInt(epsilon.join(""), 2));
 }
 
 // function powerConsumption(array) {
@@ -56,5 +57,5 @@ function powerConsumption(array) {
 //   // multiply gamma and epsilon
 // }
 
-// powerConsumption(givenData);
-powerConsumption(example);
+powerConsumption(givenData);
+// powerConsumption(example);
