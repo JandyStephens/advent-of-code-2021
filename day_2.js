@@ -8,7 +8,7 @@ console.log(data);
  * @param {string[]} array
  */
 
-// Day 2, part 2
+// Day 2, part 2 --------------------------------------------
 var givenArr = data.split("\n");
 
 function plannedCourse(array) {
@@ -34,7 +34,7 @@ function plannedCourse(array) {
 
 plannedCourse(givenArr);
 
-// Day 2, part 2
+// Day 2, part 2 --------------------------------------------
 function complexCourse(array) {
   horizontalPos = 0;
   depth = 0;
